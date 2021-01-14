@@ -1,7 +1,6 @@
 package stepdefinitions;
 
-import Task.EnterDateForm;
-import Task.OpenPage;
+import Task.*;
 import UserInterfaces.Form;
 import UserInterfaces.FormAddress;
 import UserInterfaces.HomePage;
@@ -30,7 +29,10 @@ public class RegisterStepdefinitions{
 
         @When("^He enter all date of page register$")
         public void heEnterAllDateOfPageRegister() {
-               user.attemptsTo(EnterDateForm.is());
+                user.attemptsTo(EnterDateForm.is());
+                user.attemptsTo(EnterDateAddress.is());
+                user.attemptsTo(EnterDateFormDevices.is());
+                user.attemptsTo(EnterDateLastPage.is());
                 }
 
 
